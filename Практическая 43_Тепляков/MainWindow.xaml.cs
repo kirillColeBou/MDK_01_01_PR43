@@ -22,18 +22,12 @@ namespace Практическая_43_Тепляков
     public partial class MainWindow : Window
     {
         public static MainWindow init;
-        public View.Contacts.Main MainContacts = new View.Contacts.Main();
-        public View.Groups.Main MainGroups = new View.Groups.Main();
 
         public MainWindow()
         {
             InitializeComponent();
             init = this;
-            frame.Navigate(MainContacts);
+            DataContext = new ViewModels.VM_Pages();
         }
-
-        private void OpenContacts(object sender, MouseButtonEventArgs e) => frame.Navigate(MainContacts);
-
-        private void OpenGroups(object sender, MouseButtonEventArgs e) => frame.Navigate(MainGroups);
     }
 }
