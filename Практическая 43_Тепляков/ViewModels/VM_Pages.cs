@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows;
 using Практическая_43_Тепляков.Classes;
 
 namespace Практическая_43_Тепляков.ViewModels
@@ -15,24 +16,12 @@ namespace Практическая_43_Тепляков.ViewModels
 
         public RealyCommand OpenContacts
         {
-            get
-            {
-                return new RealyCommand(obj =>
-                {
-                    MainWindow.init.frame.Navigate(new View.Contacts.Main(vm_contacts));
-                });
-            }
+            get => new RealyCommand(obj => MainWindow.init.frame.Navigate(new View.Contacts.Main(vm_contacts)));
         }
 
         public RealyCommand OpenGroups
         {
-            get
-            {
-                return new RealyCommand(obj =>
-                {
-                    MainWindow.init.frame.Navigate(new View.Groups.Main(vm_groups));
-                });
-            }
+            get => new RealyCommand(obj => MainWindow.init.frame.Navigate(new View.Groups.Main(vm_groups)));
         }
     }
 }

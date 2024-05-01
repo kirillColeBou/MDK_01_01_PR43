@@ -11,17 +11,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Практическая_43_Тепляков.View.Groups
+namespace Практическая_43_Тепляков.View.Contacts.Items
 {
     /// <summary>
-    /// Логика взаимодействия для Main.xaml
+    /// Логика взаимодействия для Item.xaml
     /// </summary>
-    public partial class Main : Page
+    public partial class Item : UserControl
     {
-        public Main(object Context)
+        public Item()
         {
             InitializeComponent();
-            DataContext = Context;
         }
     }
 }

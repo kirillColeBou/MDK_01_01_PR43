@@ -21,6 +21,7 @@ namespace Практическая_43_Тепляков.View.Contacts
         public Main(object Context)
         {
             InitializeComponent();
+            DataContext = Context;
         }
     }
 }

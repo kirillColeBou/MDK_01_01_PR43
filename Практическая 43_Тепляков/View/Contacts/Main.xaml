@@ -4,11 +4,31 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Практическая_43_Тепляков.View.Contacts"
+      xmlns:elements="clr-namespace:Практическая_43_Тепляков.View.Contacts.Items"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Main">
 
+    <Page.Resources>
+        <Style TargetType="Button" x:Key="Add">
+            <Setter Property="Background" Value="Cyan"/>
+            <Setter Property="BorderBrush" Value="#FFC8FFFF"/>
+            <Setter Property="Foreground" Value="#FF3CA960"/>
+        </Style>
+    </Page.Resources>
+
     <Grid>
-        
+        <ListView ItemsSource="{Binding Contacts}" HorizontalContentAlignment="Stretch" Margin="0,0,0,45">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <elements:Item DataContext="{Binding}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Style="{StaticResource Add}" Command="{Binding OnAddContacts}" Content="Добавить" Height="25" Width="70" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,10,10" Grid.Column="1">
+            <Button.Effect>
+                <DropShadowEffect Opacity="0.5" BlurRadius="3" ShadowDepth="3"/>
+            </Button.Effect>
+        </Button>
     </Grid>
 </Page>
