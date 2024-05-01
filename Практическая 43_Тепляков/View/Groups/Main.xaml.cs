@@ -18,7 +18,7 @@ namespace Практическая_43_Тепляков.View.Groups
     /// </summary>
     public partial class Main : Page
     {
-        public Main()
+        public Main(object Context)
         {
             InitializeComponent();
         }
